@@ -1,5 +1,6 @@
 <a href="https://fashionedforhimblog-bgmichael00.c9users.io">Home</a>
 
+
 <p>
   <strong>Title:</strong>
   <%= @article.title %>
@@ -14,7 +15,18 @@
 <%= render @article.comments %>
  
 <h2>Add a comment:</h2>
-<%= render 'comments/form' %>
- 
+<%= form_for([@article, @article.comments.build]) do |f| %>
+  <p>
+    <%= f.label :commenter %><br>
+    <%= f.text_field :commenter %>
+  </p>
+  <p>
+    <%= f.label :body %><br>
+    <%= f.text_area :body %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
 <%= link_to 'Edit', edit_article_path(@article) %> |
 <%= link_to 'Back', articles_path %>
