@@ -1,4 +1,7 @@
 class ApplicationController < ActionController::Base
+  before_filter :authenticate_admin!, except: [ :index, :show]
+  
+  private
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   def change
@@ -60,4 +63,6 @@ class ApplicationController < ActionController::Base
   def user_session_params
     params.require(:user_session).permit(:email, :password)
   end
+  
+  
 end
