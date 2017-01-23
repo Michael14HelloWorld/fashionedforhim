@@ -1,7 +1,5 @@
 class ApplicationController < ActionController::Base
   before_filter :authenticate_admin!, except: [:index, :show]
-  before_action :logged_in_user, only: [:create, :edit, :update]
-  
   private
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
@@ -40,14 +38,16 @@ class ApplicationController < ActionController::Base
       t.timestamps
     end
   end
+  
   protect_from_forgery with: :exception
+  
   def new
-    @user_session = UserSession.new
+    @admin_session = AdminSession.new
   end
 
   def create
-    @user_session = UserSession.new(user_session_params)
-    if @user_session.save
+    @admin_session = AdminSession.new(admin_session_params)
+    if @admin_session.save
       redirect_to account_url
     else
       render :action => :new
@@ -55,14 +55,14 @@ class ApplicationController < ActionController::Base
   end
 
   def destroy
-    current_user_session.destroy
-    redirect_to new_user_session_url
+    current_admin_session.destroy
+    redirect_to new_admin_session_url
   end
 
   private
 
-  def user_session_params
-    params.require(:user_session).permit(:email, :password)
+  def admin_session_params
+    params.require(:admin_session).permit(:email, :password)
   end
   
   
