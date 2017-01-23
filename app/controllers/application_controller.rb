@@ -1,11 +1,12 @@
 class ApplicationController < ActionController::Base
-  before_filter :authenticate_admin!, except: [ :index, :show]
+  before_filter :authenticate_admin!, except: [:index, :show]
+  before_action :logged_in_user, only: [:create, :edit, :update]
   
   private
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
   def change
-    create_table :users do |t|
+      create_table :users do |t|
       # Authlogic::ActsAsAuthentic::Email
       t.string    :email
 
