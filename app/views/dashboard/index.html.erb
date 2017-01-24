@@ -7,18 +7,20 @@
   <body>
     
 <div class="well well-lg" style="float: center; border: 50%; width: 50%; height: 100%">
-<h2>Log in</h2>
-
+  
+<div class="page-header">
+  <h1>Log in</h1>
+</div>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
 <form style="float: center">
   <div class="form-group">
-    <label for="email">Email address:</label>
+    <label for="email"></label>
     <%= f.label :email %><br />
     <input type="email" class="form-control" id="email">
   </div>
 
   <div class="form-group">
-    <label for="pwd">Password:</label>
+    <label for="pwd"></label>
     <%= f.label :password %><br />
     <input type="password" class="form-control" id="pwd">
   </div>
@@ -26,7 +28,6 @@
   <% if devise_mapping.rememberable? -%>
     <div class="checkbox">
       <%= f.check_box :remember_me %>
-      <label><input type="checkbox"> Remember me</label>
     </div>
   <% end -%>
 
