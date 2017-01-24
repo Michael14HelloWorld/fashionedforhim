@@ -1,12 +1,12 @@
 Rails.application.routes.draw do
   devise_for :admins
-  get 'dashboard/index'
+  get 'login/index'
 
   get 'welcome/index'
   
   root 'welcome#index'
   
-  resources :dashboard
+  resources :login
   
   resources :articles do
     resources :comments
