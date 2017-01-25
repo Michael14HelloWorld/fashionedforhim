@@ -1,45 +1,25 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  </head>
-  
-  <body>
-    
-<div class="well well-lg" style="float: center; width: 50%; height: 100%; margin: auto;">
-  
-<div class="page-header">
-  <h1>Log in</h1>
-</div>
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-<form>
-  <div class="form-group">
-    <label for="email"></label>
-    <%= f.label :email %><br />
-    <input type="email" class="form-control" id="email">
-  </div>
+    <head>
+        <title>Dashboard | Fashioned for Him</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  <div class="form-group">
-    <label for="pwd"></label>
-    <%= f.label :password %><br />
-    <input type="password" class="form-control" id="pwd">
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="checkbox" style="padding: 20px">
-      <%= f.check_box :remember_me %>
-      <p>Remmber Me</p><br>
-    </div>
-  <% end -%>
-
-  <div type="submit" class="btn btn-default">
-    <!--<button type="submit" class="btn btn-default">Submit</button>-->
-    <%= f.submit "Log in" %>
-  </div>
-<% end %>
-
-</form>
-</div>
-</body>
-
+        <style>
+            
+        </style>
+    </head>
+    <body>
+        <div class="alert alert-success alert-dismissable">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+            <strong>Successfully</strong> signed in!
+        </div>
+        
+        <h1>Welcome to your Dashboard!</h1>
+        <%= link_to 'New Blog Post', new_article_path %>
+    </body>
 </html>
