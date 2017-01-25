@@ -3,6 +3,13 @@ class ApplicationController < ActionController::Base
   private
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.
+  before_filter :require_login
+  private
+  def require_login
+    unless current_admin
+      redirect_to login_index_url
+    end
+  end
   def after_sign_in_path_for(resource)
     dashboard_index_path
   end
