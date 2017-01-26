@@ -3,13 +3,17 @@ ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
-    height: 100px;
+    background-color: #7a7a7a;
+    height: 80px;
+    font-family: Courier New;
 }
 
 li {
+    display: inline;
     float: left;
-    height: 20%;
+    height: 15%;
+    padding-top: 31px;
+    font-size: 120%;
 }
 
 li a {
@@ -19,6 +23,6 @@ li a {
     text-decoration: none;
 }
 
-a:hover {color: #70000d; text-decoration: none;}
-a:active {color: #70000d; text-decoration: none;}
+a:hover {color: red; text-decoration: none;}
+a:active {color: red; text-decoration: none;}
 a:visited {color: white; text-decoration: none;}

@@ -2,21 +2,49 @@
 <html>
 <head>
   <title>Workspace</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   
   <link rel="stylesheet" type="text/css" href="template.css.scss">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  
+  <style>
+    ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #7a7a7a;
+    height: 80px;
+    font-family: Courier New;
+}
+
+li {
+    display: inline;
+    float: left;
+    height: 15%;
+    padding-top: 31px;
+    font-size: 120%;
+}
+
+li a {
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+a:hover {color: red; text-decoration: none;}
+a:active {color: red; text-decoration: none;}
+a:visited {color: white; text-decoration: none;}
+  </style>
   
 </head>
 <body>
 
 <ul>
-<div class="navbar-header"><br>
-  <a class="navbar-brand" href="https://fashionedforhimblog-bgmichael00.c9users.io/">Fashioned For Him</a>
+<div class="navbar-header">
+  <a class="navbar-brand" href="https://fashionedforhimblog-bgmichael00.c9users.io/" style="font-size: 175%; padding-top: 28px">Fashioned For Him</a>
 </div>
-<br><br>
   <li style="float:right"><a class="active" href="#about">About</a></li>
   <li style="float:right"><a href="#contact">Contact</a></li>
   <li style="float:right"><a href="https://fashionedforhimblog-bgmichael00.c9users.io/articles">Recent Posts</a></li>
