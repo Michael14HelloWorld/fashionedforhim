@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.3.0'
 
+# Puma
+gem 'puma'
 # Heroku setup
 gem 'rails_12factor', group: :production
 #
