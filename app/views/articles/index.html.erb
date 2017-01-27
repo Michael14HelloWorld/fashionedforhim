@@ -1,24 +1,65 @@
-<h1>Listing Articles</h1>
-
-<%= link_to 'New Article', new_article_path %>
-
-<table>
-    <tr>
-        <th>Title</th>
-        <th>Text</th>
-        <th colspan="2"></th>
-    </tr>
-    
-    <% @articles.each do |article| %>
-        <tr>
-            <td><%= article.title %></td>
-            <td><%= article.text %></td>
-            <td><%= link_to 'Show', article_path(article) %></td>
-            <td><%= link_to 'Edit', edit_article_path(article) %></td>
-            <td><%= link_to 'Destroy', article_path(article), 
-            method: :delete,
-            data: { confirm: 'Are You Sure?' } %></td>
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Fashioned For Him | Blog</title>
+        <style>
+            .container {
+                width: 100%;
+                max-height: 50%;
+                padding-top: 50px;
+                padding-bottom: 50%;
+            }
             
-        </tr>
-    <% end %>
-</table>
+            body, html {
+                height: 100%;
+                margin: 0;
+            }
+            
+            .bg {
+                /* The image used */
+                background-image: url('http://cdn.pcwallart.com/images/sunset-mountain-landscapes-wallpaper-4.jpg');
+
+                /* Full height */
+                height: 100%; 
+
+                /* Center and scale the image nicely */
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+    </head>
+    
+    <body>
+        
+        <div class="bg"><p style="font-size: 500%; text-align: center; padding-top: 18%; color: white">Blog</p></div>
+        
+        <div class="container">
+            <!--<h1 style="color: #7a7a7a; font-family: Titillium Web; font-size: 350%; text-align: center">Welcome to <em>Fashioned For Him!</em></h1>-->
+            <h1 style="color: #7a7a7a; font-family: Titillium Web; font-size: 350%; text-align: center">Recent Blog <em>Posts</em></h1>
+
+            <%= link_to 'New Article', new_article_path %>
+            
+            <table>
+                <tr>
+                    <th>Title</th>
+                    <th>Text</th>
+                    <th colspan="2"></th>
+                </tr>
+                
+                <% @articles.each do |article| %>
+                    <tr>
+                        <td><%= article.title %></td>
+                        <td><%= article.text %></td>
+                        <td><%= link_to 'Show', article_path(article) %></td>
+                        <td><%= link_to 'Edit', edit_article_path(article) %></td>
+                        <td><%= link_to 'Destroy', article_path(article), 
+                        method: :delete,
+                        data: { confirm: 'Are You Sure?' } %></td>
+                        
+                    </tr>
+                <% end %>
+            </table>
+        </div>
+    </body>
+</html>
