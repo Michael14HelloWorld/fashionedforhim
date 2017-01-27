@@ -13,7 +13,7 @@
     <body>
         <h1>Create a new Blog Post</h1>
         
-        <%= form_for :article do |f| %>
+        <%= form_for Article.new do |f| %>
           <p>
             <%= f.label :title %><br>
             <%= f.text_field :title %>

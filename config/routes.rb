@@ -2,12 +2,11 @@ Rails.application.routes.draw do
 
   get 'recipes/index'
   
-  get 'articles/new'
+  get 'articles/index'
   
   get 'welcome/index'
   
   root 'welcome#index'
-  #root 'articles#new'
   
   resources :articles
   

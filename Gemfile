@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
+ruby '2.3.0'
 
+# Heroku setup
+gem 'rails_12factor', group: :production
+#
 gem 'font-awesome-sass'
 # Styling 
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.6'
