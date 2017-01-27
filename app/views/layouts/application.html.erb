@@ -6,6 +6,10 @@
   
   <link rel="stylesheet" type="text/css" href="template.css.scss">
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <!--Stylesheet for fonts."-->
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+</head>
+
   
   <style>
     ul {
@@ -15,7 +19,7 @@
     overflow: hidden;
     background-color: #7a7a7a;
     height: 80px;
-    font-family: Courier New;
+    font-family: Titillium Web;
 }
 
 li {
@@ -33,9 +37,27 @@ li a {
     text-decoration: none;
 }
 
-a:hover {color: red; text-decoration: none;}
+a:hover {color: white; text-decoration: none;}
 a:active {color: red; text-decoration: none;}
 a:visited {color: white; text-decoration: none;}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.bg {
+    /* The image used */
+    background-image: url('http://cdn.pcwallart.com/images/sunset-mountain-landscapes-wallpaper-4.jpg');
+
+    /* Full height */
+    height: 100%; 
+
+    /* Center and scale the image nicely */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
   </style>
   
 </head>
@@ -50,9 +72,12 @@ a:visited {color: white; text-decoration: none;}
   <li style="float:right"><a href="https://fashionedforhimblog-bgmichael00.c9users.io/articles">Recent Posts</a></li>
 </ul>
 
+<div class="bg"><p style="font-size: 500%; text-align: center; padding-top: 18%; color: white">Fashioned For Him</p></div>
+
 <%= yield %>
 
-<p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
+   <p class="notice"><%= notice %></p>
+   <p class="alert"><%= alert %></p>
+   <%= render 'layouts/foot' %>
 </body>
 </html>
