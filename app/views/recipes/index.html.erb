@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Comming Soon | Fashioned For Him</title>
+        <style>
+            body, html {
+                height: 100%;
+                margin: 0;
+            }
+            bgimg {
+                background-image: url('http://cdn.pcwallart.com/images/sunset-mountain-landscapes-wallpaper-4.jpg');
+                height: 100%;
+                background-position: center;
+                background-size: cover;
+                position: relative;
+                color: white;
+                font-family: "Courier New", Courier, monospace;
+                font-size: 25px;
+            }
+            .topleft {
+                position: absolute;
+                top: 0;
+                left: 16px;
+            }
+            .bottomleft {
+                position: absolute;
+                top: 0;
+                left: 16px;
+            }
+            .middle {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                text-align: center;
+            }
+            .hr {
+                margin: auto;
+                width: 40%;
+            }
+            .container {
+                width: 100%;
+                max-height: 50%;
+                padding-top: 50px;
+                padding-bottom: 50px;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="bgimg">
+            <div class="topleft">
+                <p>Fashioned for Him</p>
+            </div>
+            <div class="middle">
+                <h1>COMING SOON</h1>
+                <hr>
+                <p>35 days</p>
+            </div>
+            <div class="bottomleft">
+                <p>Recipes</p>
+            </div>
+        </div>
+        <script>
+            var countDownDate = new
+            Date("Feb 20, 2017 18:00:00").getTime();
+            
+            var x = setInterval(function() {
+                var now = new
+                Date().getTime();
+                
+                var distance = countDownDate - now;
+                
+                var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                car seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                
+                document.getElementById("demo").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+                
+                if (distance < 0) {
+                    clearInterval(x);
+                    
+                    document.getElementById("demo").innerHTML = "EXPIRED";
+                }
+                
+                
+            }, 1000);
+        </script>
+        
+        <div class="container">
+            <h1>A little info on this page-to-be!</h1>
+        </div>
+    
+    </body>
+</html>

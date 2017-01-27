@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'recipes/index'
+
   get 'welcome/index'
   
   root 'welcome#index'
