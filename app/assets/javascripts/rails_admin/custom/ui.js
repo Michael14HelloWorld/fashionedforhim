@@ -1,4 +1,4 @@
-
+/*
 $(document).on('ready pjax:success', function() {
 handleActiveBase();
 function handleActiveBase() {
@@ -47,3 +47,5 @@ $(this).toggleClass('active');
 $(this).next('.sub-menu-container').stop().slideDown();
 });
 });
+
+*/
