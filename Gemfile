@@ -12,7 +12,7 @@ gem 'rails_admin_rollincode', '~> 1.0'
 gem "devise"
 
 # Puma
-gem 'puma'
+# gem 'puma'
 # Heroku setup
 gem 'rails_12factor', group: :production
 #
