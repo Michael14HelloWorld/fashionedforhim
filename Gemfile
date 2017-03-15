@@ -1,6 +1,16 @@
 source 'https://rubygems.org'
 ruby '2.3.0'
 
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', github: 'sferik/rails_admin'
+gem 'rails_admin_rollincode', '~> 1.0'
+gem "devise"
+
+gem 'remotipart', github: 'mshibuya/remotipart'
+gem 'rails_admin', github: 'sferik/rails_admin'
+gem 'rails_admin_rollincode', '~> 1.0'
+gem "devise"
+
 # Puma
 gem 'puma'
 # Heroku setup
