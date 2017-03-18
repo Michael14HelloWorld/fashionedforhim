@@ -1,4 +1,4 @@
-## Fashioned For Him
+<h1>Fashioned For Him</h1>
 Fashioned for Him is a blog being created in the Ruby on Rails framework. 
 Some other quick specs on the Fashioned for Him blog is as follows:
 1. Uses Devise to authenticate the Admin when logging into the dashboard.
