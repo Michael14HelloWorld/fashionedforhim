@@ -6,6 +6,9 @@ gem 'rails_admin', github: 'sferik/rails_admin'
 gem 'rails_admin_rollincode', '~> 1.0'
 gem "devise"
 
+# Gem for editing blog posts
+gem 'ckeditor'
+
 # Puma
 # gem 'puma'
 # Heroku setup

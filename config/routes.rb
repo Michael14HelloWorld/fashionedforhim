@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+  mount Ckeditor::Engine => '/ckeditor'
+  
   devise_for :users
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   get 'recipes/index'
