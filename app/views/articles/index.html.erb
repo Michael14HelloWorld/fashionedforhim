@@ -9,7 +9,8 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <style>
             .container {
-                width: 100%;
+                float: left;
+                width: 70%;
                 max-height: 50%;
                 padding-top: 50px;
                 padding-bottom: 50%;
@@ -41,17 +42,23 @@
         
         <div class="container">
             <!--<h1 style="color: #7a7a7a; font-family: Titillium Web; font-size: 350%; text-align: center">Welcome to <em>Fashioned For Him!</em></h1>-->
-            <h1 style="font-size: 350%; text-align: center">Recent Blog <em>Posts</em></h1>
+            <h1 style="font-size: 350%; text-align: center; float: center;">Recent Blog <em>Posts</em></h1>
             <br><br>
             <table>
                 
                 <% @articles.each do |article| %>
                     <tr>
-                        <div class="well" style="width: 300px; max-height: 30%; float: center;">
-                            <strong style="font-size: 120%;"><%= article.title %></strong><br>
-                            <p>Miriam Groff  ~   <span class="glyphicon glyphicon-comment"></span> <%= article.comments.count %></p>
-                            <%= article.text.first(300) %><br>
-                            <%= link_to 'Read', article_path(article) %>
+                        <div class="panel-group" style="width: 300px; max-height: 30%; float: center;">
+                            <div class="panel panel-default">
+                                <div class="panel-heading">
+                                    <strong style="font-size: 120%;"><%= article.title %></strong><br>
+                                    <p>Miriam Groff  ~   <span class="glyphicon glyphicon-comment"></span> <%= article.comments.count %></p>
+                                </div>
+                                <div class="panel-body">
+                                    <%= article.text.first(300) %><br>
+                                    <%= link_to 'Read More →', article_path(article) %>
+                                </div>
+                            </div>
                         </div>
                     </tr>
                 <% end %>
