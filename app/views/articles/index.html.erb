@@ -3,6 +3,10 @@
     <head>
         <title>Blog | Fashioned For Him</title>
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <style>
             .container {
                 width: 100%;
@@ -38,22 +42,16 @@
         <div class="container">
             <!--<h1 style="color: #7a7a7a; font-family: Titillium Web; font-size: 350%; text-align: center">Welcome to <em>Fashioned For Him!</em></h1>-->
             <h1 style="font-size: 350%; text-align: center">Recent Blog <em>Posts</em></h1>
-
-            <%= link_to 'New Article', new_article_path %>
-            
+            <br><br>
             <table>
-                <tr>
-                    <th>Title</th>
-                    <th>Text</th>
-                    <th colspan="2"></th>
-                </tr>
                 
                 <% @articles.each do |article| %>
                     <tr>
-                        <div class="well">
-                            <td><%= article.title %></td>
-                            <td><%= article.text %></td>
-                            <td><%= link_to 'Show', article_path(article) %></td>
+                        <div class="well" style="width: 300px; max-height: 30%; float: center;">
+                            <strong style="font-size: 120%;"><%= article.title %></strong><br>
+                            <p>Miriam Groff  ~   <span class="glyphicon glyphicon-comment"></span> <%= article.comments.count %></p>
+                            <%= article.text.first(300) %><br>
+                            <%= link_to 'Read', article_path(article) %>
                         </div>
                     </tr>
                 <% end %>
