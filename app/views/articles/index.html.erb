@@ -9,8 +9,8 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <style>
             .container {
-                float: left;
-                width: 70%;
+                float: center;
+                width: 100%;
                 max-height: 50%;
                 padding-top: 50px;
                 padding-bottom: 50%;
@@ -33,6 +33,10 @@
                 background-repeat: no-repeat;
                 background-size: cover;
             }
+            
+            .w3-quarter {
+                padding: 20px;
+            }
         </style>
     </head>
     
@@ -42,27 +46,24 @@
         
         <div class="container">
             <!--<h1 style="color: #7a7a7a; font-family: Titillium Web; font-size: 350%; text-align: center">Welcome to <em>Fashioned For Him!</em></h1>-->
-            <h1 style="font-size: 350%; text-align: center; float: center;">Recent Blog <em>Posts</em></h1>
-            <br><br>
-            <table>
+            <!--<h1 style="font-size: 350%; text-align: center; float: center;">Recent Blog <em>Posts</em></h1>
+            <br><br>-->
+            <!--<table>-->
                 
                 <% @articles.each do |article| %>
-                
-                <div class="row">
-                    <tr>
-                        <div class="panel-group" style="width: 300px; max-height: 30%; float: center;">
-                            <div class="panel panel-default">
-                                <div class="panel-heading">
-                                    <strong style="font-size: 120%;"><%= article.title %></strong><br>
-                                    <p>Miriam Groff  ~   <span class="glyphicon glyphicon-comment"></span> <%= article.comments.count %></p>
-                                </div>
-                                <div class="panel-body">
-                                    <%= article.text.first(300) %><br>
-                                    <%= link_to 'Read More →', article_path(article) %>
-                                </div>
-                            </div>
+                    <div class="w3-quarter">
+                        <div class="panel panel-default" style="width: 300px; min-height: 300px;">
+                          <!--<img src="/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">-->
+                          <div class="panel-heading">
+                              <h3><%= article.title %></h3>
+                              <p class="w3-opacity">Miriam Groff  ~  Comments <span class="w3-badge"><%= article.comments.count %></span> </p>
+                          </div>
+                          <div class="panel-body">
+                              <p><%= article.text.first(250) %> ...</p>
+                              <%= link_to 'Read More →', article_path(article) %>
+                          </div>
                         </div>
-                    </tr>
+                    </div>
                 <% end %>
             </table>
         </div>
