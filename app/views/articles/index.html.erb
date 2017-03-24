@@ -35,6 +35,8 @@
             }
             
             .w3-quarter {
+                width: 400px;
+                height: 50%;
                 padding: 20px;
             }
         </style>
@@ -42,7 +44,7 @@
     
     <body>
         
-        <div class="bg"><p style="font-size: 500%; text-align: center; padding-top: 18%; color: white">Blog</p></div>
+        <div class="bg"><p style="font-size: 500%; text-align: center; padding-top: 35%; color: white">Blog</p></div>
         
         <div class="container">
             <!--<h1 style="color: #7a7a7a; font-family: Titillium Web; font-size: 350%; text-align: center">Welcome to <em>Fashioned For Him!</em></h1>-->
@@ -50,7 +52,7 @@
             <br><br>-->
             <!--<table>-->
                 
-                <% @articles.each do |article| %>
+                <% @articles.reverse.each do |article| %>
                     <div class="w3-quarter">
                         <div class="panel panel-default" style="width: 300px; min-height: 300px;">
                           <!--<img src="/w3images/sandwich.jpg" alt="Sandwich" style="width:100%">-->
