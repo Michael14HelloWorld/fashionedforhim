@@ -35,7 +35,7 @@
             
             .bg {
                 /* The image used */
-                background-image: url('http://cdn.pcwallart.com/images/sunset-mountain-landscapes-wallpaper-4.jpg');
+                background-image: url('http://3.bp.blogspot.com/-pSWrARtCXmU/Vbmm-5qqmFI/AAAAAAAAVo0/F9RgWu_R2YU/s1600/great-nature-wallpapers-free-widescreen-2-hd-wallpapers.jpg');
 
                 /* Full height */
                 height: 100%; 
@@ -70,26 +70,17 @@
                         <div class="panel panel-default" style="width: 300px; min-height: 300px;">
                           <div class="panel-heading">
                               <h3><%= article.title %></h3>
-                              <p class="w3-opacity">Miriam Groff  ~  Comments <span class="w3-badge"><%= article.comments.count %></span> <br> <%= article.created_at.strftime("%b %d, %Y") %> </p>
+                              <p class="w3-opacity"><%= article.created_at.strftime("%b %d, %Y") %>  |  Comments <span class="label label-primary"><%= article.comments.count %></span> </p>
                           </div>
                           <div class="panel-body">
                               <p><%= article.text.first(250) %> ...</p>
-                              <%= link_to 'Read More →', article_path(article) %>
+                              <%= link_to 'Read More', article_path(article), class: 'btn btn-primary btn-block' %>
                           </div>
                         </div>
                     </div>
                 <% end %>
             </table>
         </div>
-        
-        <!--fOOTER-->
-          <footer class="w3-container w3-padding-64 w3-center w3-opacity  w3-xlarge">
-            <!--
-            <i class="fa fa-facebook-official w3-hover-text-indigo"></i>
-            <i class="fa fa-instagram w3-hover-text-purple"></i>
-            <i class="fa fa-pinterest-p w3-hover-text-red"></i>-->
-            <p class="w3-medium">© Copyright <a href="https://github.com/Michael14HelloWorld">Michael Groff</a></p>
-          </footer>
         
     </body>
 </html>
