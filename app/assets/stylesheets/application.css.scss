@@ -20,3 +20,14 @@
 
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+// Google Fonts
+@import url(http://fonts.googleapis.com/css?family=Great+Vibes|Open+Sans:400italic,700italic,400,700);
+
+// Google Font Styles
+h1, h2, h3, h4, h5 {
+    font-family: "Great Vibes";
+}
+p {
+    font-family: 'Dosis'
+}

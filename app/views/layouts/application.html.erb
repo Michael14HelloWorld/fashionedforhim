@@ -10,46 +10,30 @@
   <!--Stylesheet for Font Awesome-->
   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
   <!--Stylesheet for fonts."-->
-  <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/3/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   
-  <style>
-      body {font-family: "Lato", sans-serif}
-    .mySlides {display: none}
-  </style>
+  <%= google_webfonts_init({
+    google: ['Great Vibes', 'Dosis']
+  }) %>
   
+  <style>
+  </style>
 </head>
 
 <body>
   
   <div class="w3-top">
-    <div class="w3-bar w3-black w3-card-2">
+    <div class="w3-bar w3-white" style="border-bottom: .5px solid #f2f2f2">
       <!--<a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="#" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>-->
-      <a href="/" class="w3-bar-item w3-button w3-padding-large">FASHIONED FOR HIM</a>
-      <a href="/articles" class="w3-bar-item w3-button w3-padding-large" style="float: right;">BLOG</a>
-      <!--<a href="#tour" class="w3-bar-item w3-button w3-padding-large w3-hide-small">ABOUT</a>
-      <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CONTACT</a>
-      <div class="w3-dropdown-hover w3-hide-small">
-        <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
-        <div class="w3-dropdown-content w3-bar-block w3-card-4">
-          <a href="#" class="w3-bar-item w3-button">Plexus</a>
-          <a href="#" class="w3-bar-item w3-button">Recipes</a>
-          <a href="#" class="w3-bar-item w3-button">Beliefs</a>
-        </div>
-      </div>-->
+      <a href="/" class="w3-bar-item w3-padding-large" style="font-family: Great Vibes; font-size: 175%; text-decoration: none">Fashioned For Him</a>
+      <a href="/articles" class="w3-bar-item w3-padding-large" style="float: right; font-family: Great Vibes; font-size: 175%; text-decoration: none">Blog</a>
+      
     </div>
   </div>
-  <div id="#" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-    <a href="#band" class="w3-bar-item w3-button w3-padding-large">BLOG</a>
-    <a href="#tour" class="w3-bar-item w3-button w3-padding-large">ABOUT</a>
-    <a href="#contact" class="w3-bar-item w3-button w3-padding-large">CONTACT</a>
-    <a href="#" class="w3-bar-item w3-button w3-padding-large">PLEXUS</a>
-  </div>
-
+  <hr>
   <%= yield %>
   
   <!--<p class="notice"><%= notice %></p>

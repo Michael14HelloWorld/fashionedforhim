@@ -22,6 +22,24 @@
     #comment {
       padding-left: 20px;
     }
+    h1, h2, h3, h4, h5 {
+        font-family: "Great Vibes";
+    }
+    
+    p {
+        font-family: 'Dosis'
+    }
+    
+    .btn-primary:hover {
+        background-color: #ff8798;
+    }
+    
+    .btn-primary:focus,
+    .btn-primary:active,
+    .btn-primary {
+      background-color: #ff9eac;
+      border: none;
+    }
   </style>
 </head>
 
@@ -32,7 +50,7 @@
 <div class="container" style="max-width: 900px; float: center">
     <p>
       <p class="w3-opacity" style="padding-left: 20px; font-size: 140%">Posted on <%= @article.created_at.strftime("%b %d, %Y") %></p>
-      <p style="font-size: 250%; padding-left: 20px;"><%= @article.title %></p><hr>
+      <h5 style="font-size: 250%; padding-left: 20px;"><%= @article.title %></h5><hr>
     </p>
     <p class="w3-justify" style="padding-left: 20px; padding-right: 20px;">
       <p style="font-size: 140%"><%= @article.text %></p>
@@ -63,16 +81,16 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Comment</h4>
+          <h2 class="modal-title">Comment</h2>
         </div>
         <div class="modal-body">
           <%= form_for([@article, @article.comments.build]) do |f| %>
           <p>
-            <%= f.label :commenter, 'Name' %><br>
+            <%= f.label :commenter, 'Name *' %><br>
             <%= f.text_field :commenter, class: 'form-control' %>
           </p>
           <p>
-            <%= f.label :body, 'Comment' %><br>
+            <%= f.label :body, 'Comment *' %><br>
             <%= f.text_area :body, class: 'form-control' %>
           </p>
           <p>
@@ -94,9 +112,10 @@
 </div>
 
           <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-black w3-xlarge">
-            <i class="fa fa-facebook-official w3-hover-text-indigo" style="padding: 10px"></i>
-                    <i class="fa fa-instagram w3-hover-text-purple" style="padding: 10px"></i>
-                    <i class="fa fa-pinterest-p w3-hover-text-red" style="padding: 10px"></i>
+            <!--<i class="fa fa-envelope w3-hover-text-blue" style="padding: 10px"> </i>-->
+                    <a href="https://www.facebook.com/faithfamilyhomefriendships/"><i class="fa fa-facebook-official w3-hover-text-indigo" style="padding: 10px"></i></a>
+                    <a href="https://www.instagram.com/miriamgroff/"><i class="fa fa-instagram w3-hover-text-purple" style="padding: 10px"></i></a>
+                    <a href="https://www.pinterest.com/offferhimpraz/"><i class="fa fa-pinterest-p w3-hover-text-red" style="padding: 10px"></i></a>
               <p class="w3-medium">© 2017 <a href="https://github.com/Michael14HelloWorld">Michael Groff</a></p>
           </footer>
 

@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!--THe code below is for Google Adsense-->
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-5852011113109152",
+            enable_page_level_ads: true
+          });
+        </script>
+        
         <!--The code below is for Google Analytics-->
           <script>
           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -13,7 +22,6 @@
 
           </script>
         <title>Blog | Fashioned For Him</title>
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'  type='text/css'>
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -35,15 +43,24 @@
             
             .bg {
                 /* The image used */
-                background-image: url('http://3.bp.blogspot.com/-pSWrARtCXmU/Vbmm-5qqmFI/AAAAAAAAVo0/F9RgWu_R2YU/s1600/great-nature-wallpapers-free-widescreen-2-hd-wallpapers.jpg');
-
-                /* Full height */
-                height: 100%; 
-
-                /* Center and scale the image nicely */
-                background-position: center;
-                background-repeat: no-repeat;
-                background-size: cover;
+                    /*background-image: url('https://lh3.googleusercontent.com/I8vaSeBPlBPeo7WQ3TKA7fUXZ8sBAZSHpOEaJeHt953rGIbjsN9TTu90Yzee4MSr3ugHpwNTmv83KNbhrjq1ZwyYrqGfDhqkYICElK55eLqJ_k2Ms61TgRz12QQfjB747zz0Lsdj2edqxquPW3taoMs5CCUgB66Vq2Gpanhr9zqiz6Lapywtw-Ry4O5GJ2Uq6KXl-eLjCSZiPBp7ebzDWcis3hPSWSD51nODcGTq0wyZIcZqjDfI_TGnWaFxbmNqluQSk50w3X3Qv0tXfxe2atq3DOZ2az2bwPjV8j4yRyOd8xyTBrBzKJKjgT7KLFZKaRikeSAOcdNKDhz8ejzNBJtCSUsr5sN_gBiJCll5vy5hLvnEeESQn-zzTxY5UiuFnPxsw0OHevDNNqHupaJ7GYIzuR1V_r5hB-RgzZ4YvAuacrO6UZlfuSp0SudtV-_8YryVEEohf8u9RrbyQlVmAJup22KiA_o9a9a0JEpoWBY4YazXExvgNpvbV3uAWUvBQZ0lf8qie2uRT49dODuNbF16Rt2EX5aBFBtV5nWvIfMGkLSAr4fiEuUmZshpE1wVjoy8FngJMv3by7Bo1PiTo8vRGmxpd4bf8o5XH3jW0MYvBWkht8wz-meP=w1208-h679-no');
+                    
+                    /* Full height */
+                    /*height: 100%;
+                    max-height: 2000px;
+    
+                    /* Center and scale the image nicely */
+                    /*background-position: center;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    */
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    float: left;
+                    margin:0 0 30px 0;
+                    padding: 5px 0 0 0 ;
+                    width: 100%;
+                    background-image:url('http://wallpapercave.com/wp/YnqV3mo.jpg');           
             }
             
             .w3-quarter {
@@ -52,18 +69,36 @@
                 padding: 20px;
                 
             }
+            .btn-primary:hover {
+                background-color: #ff8798;
+            }
+            .btn-primary:focus,
+            .btn-primary:active,
+            .btn-primary {
+              background-color: #ff9eac;
+              border: none;
+            }
+            .label, .label-primary {
+                background-color: #ff9eac;
+            }
+            
+            h1, h2, h3, h4, h5 {
+                font-family: "Great Vibes";
+            }
+            
+            p {
+                font-family: 'Dosis'
+            }
         </style>
     </head>
     
     <body>
         
-        <div class="bg"><p style="font-size: 400%; text-align: center; padding-top: 20%; color: white; min-padding: 30px">Blog</p></div>
+        <div class="bg"><p style="font-size: 400%; text-align: center; 
+            padding-top: 20%; color: black; min-padding: 30px; padding-top: 20%; padding-bottom: 30%; font-family: Great Vibes">Blog</p></div>
         
         <div class="container">
-            <!--<h1 style="color: #7a7a7a; font-family: Titillium Web; font-size: 350%; text-align: center">Welcome to <em>Fashioned For Him!</em></h1>-->
-            <!--<h1 style="font-size: 350%; text-align: center; float: center;">Recent Blog <em>Posts</em></h1>
-            <br><br>-->
-            <!--<table>-->
+            <table>
                 
                 <% @articles.reverse.each do |article| %>
                     <div class="w3-quarter">
