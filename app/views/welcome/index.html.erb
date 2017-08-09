@@ -14,8 +14,11 @@
 
           </script>
         <title>Home | Fashioned For Him</title>
-        <link rel='stylesheet' type='text/css' href='welcome/style'>
-        
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
           
         <style>
                 .container {
@@ -51,6 +54,21 @@
                     padding: 5px 0 0 0 ;
                     width: 100%;
                     background-image:url('https://dncache-mauganscorp.netdna-ssl.com/thumbseg/2031/2031377-bigthumbnail.jpg');
+                
+                .btn:hover {
+                box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+                background-color: #ff8798;
+                }
+                .btn:focus,
+                .btn:active,
+                .btn {
+                  background-color: #ff9eac;
+                  border: none;
+                }
+                .label, .label-btn {
+                    background-color: #ff9eac;
+                }                    
+                
                                     
                 }
                 h1, h2, h3, h4, h5 {
@@ -69,6 +87,8 @@
             <h2 class="w3-wide" style="font-size: 400%; text-align: center; padding: 20px;
             padding-top: 20%; color: black; min-padding: 30px; padding-top: 20%; padding-bottom: 30%; font-family: Great Vibes">Fashioned For Him</h2>
         </div>
+        
+                <!-- Modal -->
         
         <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
             <h2 class="w3-wide" style="font-family: Great Vibes">Welcome to Fashioned For Him</h2><br>
@@ -94,5 +114,35 @@
               <p class="w3-medium">© 2017 <a href="https://github.com/Michael14HelloWorld">Michael Groff</a></p>
           </footer>
           
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    $("#myModal").modal('show');
+                });
+            </script>
+            
+            
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+            
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title" style="font-family: Dosis">My Latest Blog Post</h2>
+                  </div>
+                  <div class="modal-body">
+                      <h2><%= @article.title %></h2>
+                      <p class="w3-opacity">Posted on <%= @article.created_at.strftime("%b %d, %Y") %></p>
+                      <hr>
+                      <p><%= @article.text.first(700) %>. . .</p><br>
+                      <%= link_to "Finish Reading", article_path(@article), class: "btn btn-default btn-block" %>
+                  </div>
+                </div>
+            
+              </div>
+            </div>
+            
+            
     </body>
 </html>
