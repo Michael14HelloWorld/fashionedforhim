@@ -1,0 +1,29 @@
+<script type="text/javascript">
+                $(document).ready(function(){
+                    $("#myModal").modal('show');
+                });
+            </script>
+            
+            
+            <!-- Modal -->
+            <div id="myModal" class="modal fade" role="dialog">
+              <div class="modal-dialog">
+            
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h2 class="modal-title" style="font-family: Dosis">My Latest Blog Post</h2>
+                  </div>
+                  <div class="modal-body">
+                      <h2><%= @article.title %></h2>
+                      <p class="w3-opacity">Posted on <%= @article.created_at.strftime("%b %d, %Y") %></p>
+                      <hr>
+                      <p><%= @article.text.first(700) %>. . .</p><br>
+                      <%= link_to "Finish Reading", article_path(@article), class: "btn btn-default btn-block" %>
+                  </div>
+                </div>
+            
+              </div>
+            </div>
+            

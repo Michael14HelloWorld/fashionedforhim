@@ -6,11 +6,8 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   get 'recipes/index'
-  
   get 'articles/index'
-  
   get 'welcome/index'
-  
   root 'welcome#index'
   
   resources :articles
