@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.3.0'
 
+gem 'trix'
 gem 'google-webfonts-rails', '~> 0.0.4'
 
 gem 'remotipart', github: 'mshibuya/remotipart'
