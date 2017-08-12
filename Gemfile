@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 ruby '2.3.0'
 
+gem 'trix'
 gem 'google-webfonts-rails', '~> 0.0.4'
 
 gem 'remotipart', github: 'mshibuya/remotipart'
@@ -9,7 +10,7 @@ gem 'rails_admin_rollincode', '~> 1.0'
 gem "devise"
 
 # Gem for editing blog posts
-gem 'ckeditor'
+gem 'ckeditor', github: 'galetahub/ckeditor'
 
 # Puma
 # gem 'puma'
